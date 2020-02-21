@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".TestPingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/idedping"
+                android:inputType="phone"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="75"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:text="Ping"
+                android:onClick="ping"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Result :"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/idtvping1"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/idtvping2"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/idtvping3"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/idtvpingjmlpkt"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

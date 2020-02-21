@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cardview_light_background"
+        android:layout_height="80dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Gedung Utama Lantai 3"
+                android:textSize="13sp"
+                android:id="@+id/idtvgedungp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="25dp"
+                android:id="@+id/imgwifi"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/wifi"
+                android:layout_below="@+id/idtvgedungp"
+                android:layout_alignParentLeft="true"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/idtvipp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idtvgedungp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/imgwifi"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:text="BARATA (192.168.40.40)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/idtvgedungp"
+                android:layout_centerVertical="true"
+                android:text="Null"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:id="@+id/idtvresultp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
