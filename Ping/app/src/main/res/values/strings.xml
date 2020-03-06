@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Ping</string>
-    <string name="address">Address</string>
-    <string name="wifi_only">Wifi Only</string>
-    <string name="results">Result</string>
-    <string name="ping">Ping</string>
-    <string name="refresh">Refresh</string>
-</resources>
