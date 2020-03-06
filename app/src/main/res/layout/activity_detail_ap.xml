@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="18dp"
+    android:layout_height="match_parent"
+    tools:context=".DetailApActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Lokasi"
+                    android:id="@+id/id1"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:id="@+id/iddetail_lokasi"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Jenis Router"
+                    android:textStyle="bold"
+                    android:id="@+id/id3"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:id="@+id/iddetail_ipaddress"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="SSID"
+                    android:textStyle="bold"
+                    android:id="@+id/id4"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_jenisrouter"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="IP Address"
+                    android:textStyle="bold"
+                    android:id="@+id/id2"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_ssid"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Password SSID"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/id5"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_passwordssid"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="MAC Address"
+                    android:textStyle="bold"
+                    android:id="@+id/id6"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_mac"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="IP Remote"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:id="@+id/id7"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_ipremote"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="User Admin"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:id="@+id/id8"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_useradmin"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Password Admin"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:id="@+id/id9"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_passworduseradmin"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Status"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:id="@+id/id10"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=": "
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/iddetail_status"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

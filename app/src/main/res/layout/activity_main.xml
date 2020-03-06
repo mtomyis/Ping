@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_end_color"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/cardview_light_background"
+        android:orientation="horizontal"
+        android:weightSum="15"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:background="@color/cardview_light_background"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/cardview_light_background"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:id="@+id/imgip"
+                    android:background="@color/cardview_light_background"
+                    android:src="@drawable/ip"
+                    android:layout_centerInParent="true"
+                    android:layout_height="35dp" />
+
+                <TextView
+                    android:id="@+id/idtvip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:text="Null"
+                    android:textStyle="bold"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:background="@color/cardview_light_background"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/cardview_light_background"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:id="@+id/imgremote"
+                    android:background="@color/cardview_light_background"
+                    android:src="@drawable/wifi"
+                    android:onClick="imgremote"
+                    android:layout_centerInParent="true"
+                    android:layout_height="35dp" />
+                <TextView
+                    android:id="@+id/idtvremote"
+                    android:layout_width="wrap_content"
+                    android:text="Remote AP"
+                    android:textSize="13sp"
+                    android:layout_below="@+id/imgremote"
+                    android:layout_marginTop="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="60dp"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:background="@color/cardview_light_background"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/cardview_light_background"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:id="@+id/imgping"
+                    android:background="@color/cardview_light_background"
+                    android:src="@drawable/remote"
+                    android:onClick="imgtestping"
+                    android:layout_centerInParent="true"
+                    android:layout_height="35dp" />
+                <TextView
+                    android:id="@+id/idtvping"
+                    android:layout_width="wrap_content"
+                    android:text="Test PING"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/imgping"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="60dp"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/idtunggum"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv"
+        android:layout_height="match_parent" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung Utama Lantai 3"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/ult3"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgult3"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/ult3"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvult3"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/ult3"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgult3"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="BARATA (192.168.40.40)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/ult3"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultgedungutamalt3"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung Utama Lantai 2"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/ult2"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgult2"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/ult2"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvult2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/ult2"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgult2"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="BARATA (192.168.40.41)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/ult2"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultgedungutamalt2"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung Utama Lantai 1"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/ult1"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgult1"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/ult1"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvult1"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/ult1"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgult1"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="BARATA (191.168.40.42)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/ult1"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultgedungutamalt1"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung BKA dan SDM"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/bka"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgbka"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/bka"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvbka"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/bka"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgbka"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="BARATA (192.168.40.43)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/bka"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultbka"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung DIGA"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/diga"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgdiga"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/diga"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvdiga"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/diga"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgdiga"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="BARATA (192.168.40.44)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/diga"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultdiga"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung PIB Lantai 2 Pemasaran"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/pib2p"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgpib2p"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/pib2p"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvpib2p"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/pib2p"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgpib2p"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="Barata6 (192.168.40.74)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/pib2p"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultpib2p"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung PIB Lantai 2"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/pib"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgpib"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/pib"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvpib"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/pib"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgpib"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="PPIP 32 (192.168.0.61)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/pib"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultpib"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung PIB Lantai 1"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/pib2"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgpib2"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/pib2"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvpib2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/pib2"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgpib2"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="PPIP 31 (192.168.0.134)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/pib2"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultpib2"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung PIA"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/pia"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgpia"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/pia"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvpia"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/pia"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgpia"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="AGRO2 (192.168.40.64)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/pia"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultpia"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Gedung Foundry"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/fdri"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgfdri"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/fdri"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvfdri"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/fdri"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgfdri"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="Foundry11 (192.168.40.154)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/fdri"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultfdri"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="PKT Cilegon"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/pkt"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgpkt"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/pkt"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvpkt"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/pkt"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgpkt"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="PKT Cilegon (10.2.5.2)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/pkt"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresultpkt"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp"-->
+                <!--android:background="@color/cardview_light_background"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_height="80dp">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:text="Tegal"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:id="@+id/tegal"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:layout_height="wrap_content" />-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="25dp"-->
+                        <!--android:id="@+id/imgtegal"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:src="@drawable/wifi"-->
+                        <!--android:layout_below="@+id/tegal"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_height="25dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tvtegal"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/tegal"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginLeft="3dp"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:layout_toRightOf="@+id/imgtegal"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:text="Tegal (36.66.164.25)" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_below="@+id/tegal"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="Null"-->
+                        <!--android:layout_marginTop="17dp"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:textColor="@color/cardview_dark_background"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:id="@+id/idtvresulttegal"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+</LinearLayout>
